@@ -13,7 +13,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "aws s3 cp build/ s3://butterdemo.joshglazer.com --recursive",
+    "deploy": "npm run build && aws s3 cp build/ s3://butterdemo.joshglazer.com --recursive",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

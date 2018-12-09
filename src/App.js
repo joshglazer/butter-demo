@@ -5,9 +5,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import Header from './components/layout/Header'
 
-import Home from './components/Home'
 import Blog from './components/Blog'
-import Contact from './components/Contact'
+import Page from './components/Page'
 
 class App extends Component {
   constructor(props) {
@@ -24,9 +23,8 @@ class App extends Component {
           <div>
             <Header />
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/blog" component={Blog} />
-              <Route path="/contact" component={Contact} />
+              <Route exact path="/" component={Blog} />
+              <Route component={Page} />
             </Switch>
           </div>
         </BrowserRouter>
