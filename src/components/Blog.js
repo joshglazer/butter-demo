@@ -9,25 +9,33 @@ class Blog extends Component {
     super(props);
 
     this.state = {
-      content: null
+      blogPosts: null
     };
   }
 
   componentWillMount() {
-    butter.page.retrieve('*', 'homepage').then((resp) => {
-      this.setState({
-        content: resp.data.data
-      })
-    });
+    butter.post.list({page: 1, page_size: 10}).then((response) => {
+      this.setState({blogPosts: response.data});
+    })
+  }
+
+  renderBlogPosts() {
+    if (this.state.blogPosts) {
+      console.log(this.state.blogPosts);
+      return this.state.blogPosts.data.map((data) => {
+        return (
+          <article key={data.url}>
+            <h2>{data.title}</h2>
+            <div dangerouslySetInnerHTML={{__html: data.body}} />
+          </article>
+        );
+      });
+    }
   }
 
   render() {
-    if (this.state.content) {
-      const homepage = this.state.content;
-      console.log(homepage);
-      return (
-        <h1>{homepage.headline}</h1>
-      );
+    if (this.state.blogPosts) {
+      return this.renderBlogPosts()
     } else {
       return (
         <div>

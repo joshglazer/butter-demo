@@ -23,10 +23,11 @@ class Home extends Component {
 
   render() {
     if (this.state.content) {
-      const homepage = this.state.content;
-      console.log(homepage);
       return (
-        <h1>{homepage.headline}</h1>
+        <div>
+          <h1>{this.state.content.headline}</h1>
+          <div dangerouslySetInnerHTML={{__html: this.state.content.fields.content}} />
+        </div>
       );
     } else {
       return (

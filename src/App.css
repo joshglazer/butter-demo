@@ -18,6 +18,22 @@
   color: white;
 }
 
+.App-header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1em;
+}
+
+.App-header nav ul li {
+  display: inline;
+  padding: 0 10px;
+}
+
+.App-header nav ul li .App-link {
+  text-decoration: none;
+}
+
 .App-footer {
   background-color: #282c34;
   min-height: 20vh;
