@@ -1,3 +1,9 @@
+# Butter Blog Demo
+
+I wanted to see what it would be like to build a react site which is backed by a CMS.  I found a hosted headless CMS called ButterCMS (www.buttercms.com) which is free to use for developers.  After setting up a few example blog posts and pages, I used their API to bring the content into my react site.
+
+# This following was included by default when I created this application
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
