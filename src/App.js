@@ -29,8 +29,8 @@ class App extends Component {
           </div>
         </BrowserRouter>
         <footer className="App-footer">
-          <div>
-            Powered by <a className='App-link' href='https://buttercms.com/' rel="noopener noreferrer" target='_blank'>ButterCMS</a>
+          <div className="Attribution">
+            Powered by <a className='App-link' href='https://buttercms.com/' rel="noopener noreferrer" target='_blank'><img src="https://cdn.buttercms.com/RyJ7UhcVTCRqrCFXwgCo" alt="ButterCMS" /></a>
           </div>
         </footer>
       </div>

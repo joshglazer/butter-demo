@@ -48,6 +48,11 @@
   color: #61dafb;
 }
 
+.Attribution img {
+  height: 40px;
+  vertical-align: middle;
+}
+
 img {
   max-width: 100%;
 }
